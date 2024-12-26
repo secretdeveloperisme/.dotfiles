@@ -1,0 +1,7 @@
+[user]
+	name = secretdeveloperisme
+	email = linh072217@gmail.com
+[init]
+	defaultBranch = main
+[diff]
+	algorithm = histogram
