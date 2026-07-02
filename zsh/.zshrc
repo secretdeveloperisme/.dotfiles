@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="minimal"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,8 +70,7 @@ ZSH_THEME="minimal"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting sudo)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -102,18 +101,25 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set custom alias
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+# Integrate with starship
 eval "$(starship init zsh)"
+
+# Export custom library path
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/Programs/nvim-linux64/bin:$PATH
+export PATH=$HOME/programs/nvim-linux-x86_64/bin:$PATH
 
-GTK_IM_MODULE=ibus
-QT_IM_MODULE=ibus
-XMODIFIERS=@im=ibus
-
+# Set neovim configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export EDITOR=nvim
+export VISUAL=nvim
+# Export Rust environment
+. "$HOME/.cargo/env"

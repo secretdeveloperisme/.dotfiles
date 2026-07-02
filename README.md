@@ -8,10 +8,10 @@ stow -t ~ folder_path
 ## How to insall stow
 ### APT package manager
 ```bash
+sudo apt update
 sudo apt install stow
-
 ```
-### Download directly via http: [stow](https://ftp.gnu.org/gnu/stow/)
+### Download directly via http: [stow download link](https://ftp.gnu.org/gnu/stow/)
 
 ## How to use stow
 - Symlink all files recursively to a given directory:

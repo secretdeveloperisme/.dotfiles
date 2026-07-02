@@ -119,14 +119,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+# Export custom library path
 . "$HOME/.cargo/env"
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/Programs/nvim-linux64/bin:$PATH
-
-GTK_IM_MODULE=ibus
-QT_IM_MODULE=ibus
-XMODIFIERS=@im=ibus
-ibus-daemon -drx
+export PATH=$HOME/programs/nvim-linux-x86_64/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

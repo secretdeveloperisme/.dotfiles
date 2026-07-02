@@ -1,5 +1,6 @@
 alias l.='ls -d .* --color=auto'
 alias lt='ls --human-readable --size -1 -S --classify'
+alias le='exa -al -L 2 --icons --color=always --group-directories-first'
 
 alias cd..='cd ..'
 alias ..='cd ..'
