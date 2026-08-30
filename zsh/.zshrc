@@ -123,3 +123,10 @@ export EDITOR=nvim
 export VISUAL=nvim
 # Export Rust environment
 . "$HOME/.cargo/env"
+
+# Export Java Environment
+export JAVA_HOME=$HOME/programs/jdk-21.0.11+10
+export MVN_HOME=$HOME/programs/apache-maven-3.9.16
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$MVN_HOME/bin:$PATH
+
